@@ -1,0 +1,10 @@
+Legends	Mastery	Date	Skins Owned
+Zed	600,000	14-Jun	6
+Ekko	254,355	12-Mar	4
+Shaco	108,854	9-Aug	5
+Gangplank	196,666	7-May	4
+Yasou	80,00	12-Aug	5
+Yone	65,000	5-Sep	7
+Azir	25,400	25-Jun	8
+Talon	95,000	5-Mar	11
+Jhin	100	27-May	2
