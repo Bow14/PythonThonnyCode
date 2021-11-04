@@ -58,7 +58,7 @@ def main():
                 remaining_initals.append(line[2]) #Goes through list of info and check book_initals if its woo then keep it
                 
         book_inital_2 = remaining_initals[1]
-        for line in remaining_initals
+        for line in remaining_initals:
             if line != book_inital_2:
                 book_inital_3 = line 
         
@@ -75,7 +75,22 @@ def main():
                 book_ALG.append(line)
     
     
+    def find_longest(book):
+        longest_line = book[0]
+        for line in book:
+            if len(line.txt) >= len(longest_line.txt):
+                longest_line = line
+        return longest_line
     
+    def find_shortest(book):
+        shortest_line = book[0]
+        for line in book:
+            if len(line.txt) <= len(shortest_line.txt):
+                shortest_line = line
+        return shortest_line
+    
+    def average_line(book):
+        running_total_lines = 0
     
     
     
