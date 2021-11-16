@@ -1,0 +1,5 @@
+s = input()
+s1 = s[:len(s)//2]
+s2 = s[len(s)//2:]
+print(s1)
+print(s2)
