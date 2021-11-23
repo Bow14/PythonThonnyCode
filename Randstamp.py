@@ -17,7 +17,14 @@ def main():
             point[0] += step[0]
             point[1] += step[1]
         end_points.append(point)
-    print(end_points)
+
+    
+    #draw the endpoints to the canvas
+    bo.pu()
+    for point in end_points:
+        bo.goto(point[0],point[1])
+        bo.stamp()
+    bo.screen.mainloop()
             
     
     
