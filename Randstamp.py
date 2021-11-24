@@ -25,7 +25,13 @@ def main():
         bo.goto(point[0],point[1])
         bo.stamp()
     bo.screen.mainloop()
-            
+    
+    #Math from distance from origin endpoints
+    distance = []
+    for point in end_point:
+        dist = math.sqrt(point[0]**2 + point[1]**2)
+        distance.append(dist)
+    print(distance)
     
     
     
