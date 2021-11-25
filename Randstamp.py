@@ -13,6 +13,7 @@ def main():
     for i in range(walks):
         point = [0,0]
         for j in range(length):
+            #point = list(map(sum,zip(point,choice(steps)))
             step = choice(steps)
             point[0] += step[0]
             point[1] += step[1]
@@ -28,10 +29,11 @@ def main():
     
     #Math from distance from origin endpoints
     distance = []
-    for point in end_point:
+    for point in end_points:
         dist = math.sqrt(point[0]**2 + point[1]**2)
         distance.append(dist)
-    print(distance)
+    # calculate average walk length
+    print(f'\nAverage walk length: {mean(distance)}')
     
     
     
