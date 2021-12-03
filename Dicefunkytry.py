@@ -13,13 +13,14 @@ bo = turtle.Turtle()
 
 
 walks = 50
-length = 1000
+length = 200
 Pa = [(0,1),(1,0),(0,-1),(-1,0)]
 Mi_ma = [(-1, 0),(0,1),(1,0),(0,-2)]
 Reg = [(-1,0),(1,0)]
+end_points = []
    
 def data(walks, length, steps, pen_color, pen_shape):
-    end_points = []
+    #end_points = []
     #for each walk of 1000 steps, find the endpoint, add to list
     for i in range(walks):
         point = [0,0]
@@ -36,13 +37,25 @@ def plot(walks, pen_color, pen_shape):
     bo.color(pen_color)
     bo.shape(pen_shape)
     bo.shapesize(0.5, 0.5)
-    walks = end_points
+    data = walks
+    print(data)
     
-        bo.pu
-        for i in range(walks)
-            bo.goto(point[i],point[1])
-            bo.stamp()
-        bo.screen.mainloop()
+    
+    for i in range(len(data)):
+        bo.pu()
+        bo.goto(data[i])
+        bo.stamp()
+        if i > 50:
+            bo.color("green")
+            bo.shape("square")
+        if i > 100:
+            bo.color("red")
+            bo.shape("triangle")
+            
+        
+        
+        
+    bo.screen.mainloop()
    
     #draw the endpoints to the canvas
     #bo.pu()
@@ -52,8 +65,9 @@ def plot(walks, pen_color, pen_shape):
     #bo.screen.mainloop()
 
 def stimulate(walks, length, steps):
-   
-    end_points = []
+    point = [0,0]
+    end_points.append(point)
+    #end_points = []
    
     #for each walk of 1000 steps, find the endpoint, add to list
     for i in range(walks):
@@ -80,11 +94,14 @@ def stimulate(walks, length, steps):
 
 def main():
     Pa_plot = stimulate(walks, length, Pa)
-    plot(walks, length, Pa_plot, "black", "circle")
+    print(Pa_plot)
+    #plot(Pa_plot, "black", "circle")
     Ma_plot = stimulate(walks, length, Mi_ma)
-    plot(walks, length, Ma_plot, "green", "square")
+    print(Ma_plot)
+    #plot(Ma_plot, "green", "square")
     Reg_plot = stimulate(walks, length, Reg)
-    plot(walks, length, Reg_plot, "red", "triangle")
+    print(Reg_plot)
+    plot(Reg_plot, "black", "circle")
   
    
 if __name__ == '__main__':
