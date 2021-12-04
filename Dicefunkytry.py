@@ -13,7 +13,7 @@ bo = turtle.Turtle()
 
 
 walks = 50
-length = 200
+length = 500
 Pa = [(0,1),(1,0),(0,-1),(-1,0)]
 Mi_ma = [(-1, 0),(0,1),(1,0),(0,-2)]
 Reg = [(-1,0),(1,0)]
@@ -75,8 +75,12 @@ def stimulate(walks, length, steps):
         for j in range(length):
             #point = list(map(sum,zip(point,choice(steps)))
             step = choice(steps)
-            point[0] += step[0]
-            point[1] += step[1]
+            if (steps == Mi_ma) and (step ==( 0,-1)):
+                point[0] += step[0]
+                point[1] += 2 * step[1]
+            else:
+                point[0] += step[0]
+                point[1] += step[1]
         end_points.append(point)
     return(end_points)
 
@@ -94,13 +98,13 @@ def stimulate(walks, length, steps):
 
 def main():
     Pa_plot = stimulate(walks, length, Pa)
-    print(Pa_plot)
+    #print(Pa_plot)
     #plot(Pa_plot, "black", "circle")
     Ma_plot = stimulate(walks, length, Mi_ma)
-    print(Ma_plot)
+    #print(Ma_plot)
     #plot(Ma_plot, "green", "square")
     Reg_plot = stimulate(walks, length, Reg)
-    print(Reg_plot)
+    #print(Reg_plot)
     plot(Reg_plot, "black", "circle")
   
    
