@@ -22,6 +22,13 @@ def conclusion_formating(conclusions)
         conclusion.write('Clinton was wrong in his job count and that is unfortuante')
         
 def data_sort():
+        '''look at every single year -- loop
+    do 3 things in loop
+    #1 get democrat or republican year
+    #2 total number of jobs
+    #3 add total number of jobs to republican_jobs or to democrat_job '''
+    
+
 
 def recieve_presidents_info(contents_presidents)
     for line in contents_presidents
@@ -32,5 +39,9 @@ def gather_data(the_contents)
         parameters.append(line.split().strip(','))
 
 def main()
+
+    conclusions = open('conclusions.md', 'w')
+    president_info = open("new_bls_data.csv")
+    presidents = open('presidents.txt' , 'r')
         
     
