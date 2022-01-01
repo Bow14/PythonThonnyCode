@@ -27,6 +27,7 @@ def data_sort():
     #1 get democrat or republican year
     #2 total number of jobs
     #3 add total number of jobs to republican_jobs or to democrat_job '''
+        
     
 
 
@@ -43,5 +44,13 @@ def main()
     conclusions = open('conclusions.md', 'w')
     president_info = open("new_bls_data.csv")
     presidents = open('presidents.txt' , 'r')
+    
+    contents = presidents_data.readlines()
+    contents_of_presidents = presidents.readlines()
+    gather_data(the_contents)
+    recieve_presidents_info(contents_of_presidents)
+    data_sort()
+    conclusion_formating(conclusions)
+    
         
     
