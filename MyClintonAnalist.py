@@ -29,7 +29,7 @@ def data_sort():
     #3 add total number of jobs to republican_jobs or to democrat_job '''
     global democrat_jobs
     global republican_jobs
-    global list_of_presidents
+    global recieve_presidents_info
     global parameters
         
     
