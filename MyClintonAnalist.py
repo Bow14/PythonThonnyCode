@@ -31,6 +31,14 @@ def data_sort():
     global republican_jobs
     global recieve_presidents_info
     global parameters
+    
+    job_year = 0
+    row = 0
+    for year_data in recieve_presidents_info:
+        for job_string in parameters[1:13]:
+            job_interger = int(job_string)
+            job_year += job_interger
+    
         
     
 
