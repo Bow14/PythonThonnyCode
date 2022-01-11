@@ -9,7 +9,7 @@ republican_jobs = 0
 parameters = []
 list_of_presidents = []
 
-def conclusion_formating(conclusions)
+def conclusion_formating(conclusions):
     clintons_statement = 42000000
     
     conclusions.write('Republican Job count **{}**'.format(republican_jobs))
@@ -22,7 +22,7 @@ def conclusion_formating(conclusions)
         conclusion.write('Clinton was wrong in his job count and that is unfortuante')
         
 def data_sort():
-        '''look at every single year -- loop
+    '''look at every single year -- loop
     do 3 things in loop
     #1 get democrat or republican year
     #2 total number of jobs
@@ -38,20 +38,31 @@ def data_sort():
         for job_string in parameters[1:13]:
             job_interger = int(job_string)
             job_year += job_interger
-    
         
     
+        
+    row += 1
+        
+    if year_data[1] == "d":
+        democrat_jobs += job_year
+    else:
+        republican_jobs += job_year
+            
+    job_year = 0
+            
+    democrat_jobs = (democrat_jobs * 1000)
+    republican_jobs = (republican_jobs * 1000)
 
 
-def recieve_presidents_info(contents_presidents)
-    for line in contents_presidents
+def recieve_presidents_info(contents_presidents):
+    for line in contents_presidents:
         list_of_presidents.append(line.split().strip(','))
     
-def gather_data(the_contents)
-    for line in the_contents
+def gather_data(the_contents):
+    for line in the_contents:
         parameters.append(line.split().strip(','))
 
-def main()
+def main():
 
     conclusions = open('conclusions.md', 'w')
     president_info = open("new_bls_data.csv")
